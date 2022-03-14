@@ -4,6 +4,6 @@
   "home_products": "Products",
   "added_to_cart": "Added",
   "add_to_cart": "Add To Cart",
-  "error_message": "SomeThing went wrong ,Plesae refresh"
-
+  "error_message": "SomeThing went wrong ,Plesae refresh",
+  "empty_message": "There is no products yet"
 }

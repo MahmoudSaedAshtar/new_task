@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:task/common/constants/app_text_styles.dart';
 import 'package:task/common/helpers/app_dimensions.dart';
+import 'package:task/common/localization/app_localization.dart';
 import 'package:task/main.dart';
 import 'package:task/screens/home/helper/product_helper.dart';
 import 'package:task/screens/home/models/product.dart';
@@ -37,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Consumer<ProductProvider>(
               builder: (context, value, child) {
                 return
+                value.productList.length>0?
                   RefreshIndicator(
                     onRefresh: () async {
                       _productHelper.count = _productHelper.count + 5;
@@ -57,7 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       childAspectRatio: 0.7,
                       crossAxisSpacing: 10,
                     ),
-                  ));
+                  )):Center(child: Text(AppLocalizations.of(context: navigatorKey.currentContext!)
+                    ?.translate(key: "empty_message")??"",style: AppTextStyles.madium_black,),);
               });
   }
 }

@@ -4,5 +4,6 @@
   "home_products": "المنتجات",
   "added_to_cart": "تم الاضافة",
   "add_to_cart": "اضف الي السلة",
-  "error_message": "حدث خطا ما براء المحاولة مرة اخري"
+  "error_message": "حدث خطا ما براء المحاولة مرة اخري",
+  "empty_message": "لا توجد منتجات حاليا"
 }
