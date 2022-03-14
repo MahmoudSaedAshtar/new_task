@@ -12,18 +12,9 @@ abstract class StorageKeys {
 
 
 
-  static const String USER_MODEL = "USER_MODEL";
-  static const String USER_UID = "USER_UID";
-  static const String PROFILE_ID = "PROFILE_ID";
-  static const String EDUCATION_SYSTEM_ID = "EDUCATION_SYSTEM_ID";
-  static const String EDUCATION_TYPE_ID = "EDUCATION_TYPE_ID";
-  static const String GRADE_ID = "GRADE_UID";
-  static const String SECTION_ID = "SECTION_ID";
-  static const String USER_NAME = "USER_NAME";
-  static const String PROFILE_DAtA = "PROFILE_DAtA";
-  static const String CLASSES_DATA = "CLASSES_DATA";
 
-  static const String USER_MAIL = "USER_MAIL";
-  static const String ROCKET_AUTHENTICATION = "ROCKET_AUTHENTICATION";
-  static const String SUBSCRIBE_SCREEN_APPEARANCE = "SUBSCRIBE_SCREEN_APPEARANCE";
+
+
+
+
 }

@@ -13,7 +13,7 @@ class NetworkLayer {
   static NetworkLayer? _instance;
 
   NetworkLayer._internal();
-  String _url=ApiBaseUrl.SERVER_BSE_URL;
+  String _url=ApiBaseUrl.SERVER_BASE_URL;
 
   Dio _dio = Dio();
 
@@ -65,7 +65,7 @@ class NetworkLayer {
       _requestBody.addAll(apiParameters.formData);
     }
 
-    log("******Request************(serviceId:${apiParameters.apiCode})\n${json.encode(_requestBody)}");
+
 
     Options _optionSendReq=_options;
     _optionSendReq.method = (networkType==NETWORK_REQUEST_TYPE.POST)?"POST":"GET";
@@ -73,8 +73,6 @@ class NetworkLayer {
     if(header != null){
       _optionSendReq.headers = header;
     }
-
-    log("******Request************(serviceId:${_optionSendReq.headers})");
 
 
     if(!apiParameters.silentProgress) {
@@ -101,7 +99,6 @@ class NetworkLayer {
               }
               return Future.delayed(Duration(seconds: 1));
             });
-        log("******Response************(serviceId:${apiParameters.apiCode})\n${jsonDecode(response.toString()).toString()}");
         if(!apiParameters.silentProgress) {
           EasyLoading.dismiss();
         }
@@ -115,9 +112,7 @@ class NetworkLayer {
               statusCode: ex.response?.statusCode ?? 0,
               statusMessage: ex.response?.statusMessage ?? ""
           );
-          log("${ex.response?.statusMessage?.toString()} ${ex.response?.statusCode?.toString()}");
         }else{
-          log("${ex.response?.statusMessage?.toString()} ${ex.response?.statusCode?.toString()}");
           throw PlatformException(message:ex.response?.statusMessage ?? "" ,code: ex.response?.statusCode?.toString()??"");
         }
       }

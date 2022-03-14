@@ -1,5 +1,7 @@
 {
   "navigation_label_home": "الرئيسية",
   "navigation_label_profile": "صفحتي",
-  "home_products": "المنتجات"
+  "home_products": "المنتجات",
+  "added_to_cart": "تم الاضافة",
+  "add_to_cart": "اضف الي السلة"
 }

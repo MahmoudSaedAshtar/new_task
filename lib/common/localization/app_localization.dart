@@ -8,9 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:task/common/constants/storage_keys.dart';
 import 'package:task/common/storage/hive_storage.dart';
 
-/****
- * author araafat
- */
 
 class AppLocalizations {
   final Locale locale;
