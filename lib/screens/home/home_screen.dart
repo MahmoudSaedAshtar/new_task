@@ -37,6 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
           Consumer<ProductProvider>(
               builder: (context, value, child) {
                 return
+                  RefreshIndicator(
+                    onRefresh: () async {
+                      _productHelper.count = _productHelper.count + 5;
+                      _productHelper.getAllProducts();
+                }
+                ,child:
                   GridView.builder(
                     controller: controller,
                     itemCount: value.productList.length,
@@ -51,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       childAspectRatio: 0.7,
                       crossAxisSpacing: 10,
                     ),
-                  );
+                  ));
               });
   }
 }
