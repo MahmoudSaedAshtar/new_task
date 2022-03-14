@@ -3,5 +3,6 @@
   "navigation_label_profile": "صفحتي",
   "home_products": "المنتجات",
   "added_to_cart": "تم الاضافة",
-  "add_to_cart": "اضف الي السلة"
+  "add_to_cart": "اضف الي السلة",
+  "error_message": "حدث خطا ما براء المحاولة مرة اخري"
 }

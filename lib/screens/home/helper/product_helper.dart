@@ -19,7 +19,6 @@ class ProductHelper {
       Response _response = await NetworkLayer().sendAppRequest(
         apiParameters: ApiParameters(
           apiCode: ApiCodes.GET_PRODUCTS,
-          showError: true,
           formData: {
             "limit":count,
             "sort":"desc"
@@ -32,7 +31,6 @@ class ProductHelper {
               .products;
     } on PlatformException catch (error) {
       count = count-5;
-      products = [];
     }
     if(products.isNotEmpty) {
       Provider
@@ -49,7 +47,6 @@ class ProductHelper {
       Response _response = await NetworkLayer().sendAppRequest(
         apiParameters: ApiParameters(
           apiCode: ApiCodes.ADD_TO_CART,
-          showError: false,
           formData: {
             "userId":5,
             "date":DateTime.now().toString(),
@@ -69,7 +66,6 @@ class ProductHelper {
       Response _response = await NetworkLayer().sendAppRequest(
         apiParameters: ApiParameters(
           apiCode: ApiCodes.get_USER_CART,
-          showError: true,
           silentProgress: false,),
         networkType: NETWORK_REQUEST_TYPE.GET,
       );

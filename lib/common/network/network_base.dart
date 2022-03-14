@@ -2,8 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:task/common/constants/api_codes.dart';
+import 'package:task/common/localization/app_localization.dart';
+import 'package:task/main.dart';
 import 'model/apiParameters.dart';
 import 'network_enum.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -105,7 +108,8 @@ class NetworkLayer {
         return(response);
       }on DioError catch (ex) {
         EasyLoading.dismiss();
-
+        ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context: navigatorKey.currentContext!)
+            ?.translate(key: "error_message")??"")));
       if(apiParameters.showError) {
           _validateValue(
               dioErrorType: ex.type,
