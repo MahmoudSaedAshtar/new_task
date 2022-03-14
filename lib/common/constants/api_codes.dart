@@ -1,8 +1,10 @@
 class ApiBaseUrl {
-  static const String SERVER_BSE_URL = 'https://apimobileservicesdev.azurewebsites.net/api/';
+  static const String SERVER_BASE_URL = 'https://fakestoreapi.com/';
 
 }
 
 class ApiCodes {
-  static const String GET_PRODUCTS = "v1/Authentication/GenerateOTP";
+  static const String GET_PRODUCTS = "products";
+  static const String ADD_TO_CART = "carts";
+  static const String get_USER_CART = "carts/user/2";
 }

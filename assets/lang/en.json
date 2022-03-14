@@ -1,5 +1,7 @@
 {
   "navigation_label_home": "Home",
   "navigation_label_profile": "Profile",
-  "home_products": "Products"
+  "home_products": "Products",
+  "added_to_cart": "Added",
+  "add_to_cart": "Add To Cart"
 }
